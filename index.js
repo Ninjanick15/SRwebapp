@@ -2,19 +2,14 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
-var LoremIpsum = require('lorem-ipsum').LoremIpsum;
-
-var lorem = new LoremIpsum({
-  sentencesPerParagraph: {
-    max: 8,
-    min: 4
-  },
-  wordsPerSentence: {
-    max: 16,
-    min: 4
-  }
+router.get('/', function(req, res){ 
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
+app.use('/', router);
 
-app.get('/', (req, res) => res.send(lorem.generateParagraphs(7)))
+router.get('/', function(req, res){ 
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+app.use('/', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
