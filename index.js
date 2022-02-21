@@ -21,4 +21,5 @@ router.get('/', function(req, res){
 });
 app.use('/', router);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+let server = app.listen(8080, function(){
+});
