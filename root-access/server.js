@@ -16,6 +16,12 @@ router.get('/', function (req, res) {
 });
 app.use('/', router);
 
+//we need one of these for each html page we have. 
+router.get('/reg', function(req, res){ // set this to be the same as your href <a> tag in the nav menu 
+  res.sendFile(path.join(__dirname, '/reg.html')); // the registration page
+});
+app.use('/reg', router); //same as top
+
 app.get('/style.css', function (req, res) {
     res.sendFile(path.join(__dirname, '/style.css')); //link the css
 });
