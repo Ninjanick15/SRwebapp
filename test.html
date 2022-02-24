@@ -1,10 +1,21 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+
+    <title>TWIST: Home</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="script.js"></script>
+
 </head>
+
 <body>
 
     <ul>
@@ -14,21 +25,19 @@
         </center>
     </ul>
 
-    <h2>Create New Session</h2>
+    <button onclick="Test()">Test</button>
 
-    <form action="/create_session" method="POST">
+    <fieldset>
 
-        <input type="datetime-local" name="datetime" placeholder="Date and Time" required><br>
+        <legend>JS Test</legend>
 
-        <input type="number" name="env_id" placeholder="Enviroment ID" required><br>
+        <p id="Info">...Test...</p>
 
-        <input type="number" name="numofleaves" placeholder="Number of leaves" required><br>
-
-        <input type="number" name="height" placeholder="Height (cm)" required><br><br>
-
-        <input type="submit" value="Submit">
-
-    </form>
+    </fieldset>
+    </div>
 
 </body>
+
+</footer>
+
 </html>
