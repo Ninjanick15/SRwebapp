@@ -1,4 +1,13 @@
-﻿legend {
+﻿body {
+    background-color: #808080;
+}
+
+html {
+    background-color: #808080;
+}
+
+
+legend {
     background-color: #808080;
     color: #4cff00;
 }
