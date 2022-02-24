@@ -29,6 +29,21 @@ app.get('/style.css', function (req, res) {
 var img = require('path').join(__dirname, '/assets');
 app.use(express.static(img)); //link to images and other assets.
 
+var con = mysql.createPool({ // .createPool if we want the connection to stay open(pool), .createConnection closes after a amount of time (normal)
+    host: "remotemysql.com", //do not change these four lines. login details for our DB
+    user: "mpelXDDRJY",
+    password: "puWFde9TWU",
+    database: "mpelXDDRJY"
+});
+
+con.getConnection(function (err) { // .getConnection for pool connection, .connect for normal connection.
+    if (err) {
+        console.log(err)
+        return
+    }
+    console.log("Connected to database!");
+});
+
 //display html
 let server = app.listen(8080, function () {
 });
