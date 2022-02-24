@@ -10,40 +10,13 @@
 
     <form action="/create_session" method="POST">
 
-        <input type="number" name="session" placeholder="Session ID#" required><br>
+        <input type="datetime" name="datetime" placeholder="Date and Time" required><br>
 
-        <input type="number" name="time" placeholder="Time" required><br>
+        <input type="number" name="env_id" placeholder="Enviroment ID" required><br>
 
-        <input type="number" name="room" placeholder="Room #" required><br>
+        <input type="number" name="numofleaves" placeholder="Number of leaves" required><br>
 
-        <input type="text" name="presenter" placeholder="Presenter" required><br><br>
-
-        <input type="checkbox" name="subject" value="Programming">
-        <label for="Programming">Programming </label><br>
-
-        <input type="checkbox" name="subject" value="Geology">
-        <label for="Geology">Geology </label><br>
-
-        <input type="checkbox" name="subject" value="Math">
-        <label for="Math">Math </label><br>
-
-        <input type="checkbox" name="subject" value="Tech">
-        <label for="Tech">Tech </label><br>
-
-        <input type="checkbox" name="subject" value="Biology">
-        <label for="Biology">Biology </label><br>
-
-        <input type="checkbox" name="subject" value="Cyber Security">
-        <label for="Cyber Security">Cyber Security </label><br>
-
-        <input type="checkbox" name="subject" value="Machine Learning">
-        <label for="Machine learning">Machine learning </label><br>
-
-        <input type="checkbox" name="subject" value="UAV">
-        <label for="UAV">UAV </label><br>
-
-        <input type="checkbox" name="subject" value="Web Design">
-        <label for="Web Design">Web Design </label><br><br>
+        <input type="text" name="height" placeholder="Height (cm)" required><br><br>
 
         <input type="submit" value="Submit">
 
@@ -51,8 +24,7 @@
 
     <br>
 
-    <a href='/delete'><button class="button">Delete</button></a>
     <a href='/update'><button class="button">Update</button></a>
-    <a href='/search'><button class="button">Search</button></a>
+   
 </body>
 </html>

@@ -44,6 +44,21 @@ con.getConnection(function (err) { // .getConnection for pool connection, .conne
     console.log("Connected to database!");
 });
 
+app.post('/create_session', function (req, res) {
+
+    var datetime = req.body.datetime;
+    var env_id = req.body.env_id;
+    var numofleaves = req.body.numofleaves;
+    var height = req.body.height;
+
+    var sql = "INSERT INTO Organizer (datetime, env_id, numofleaves, height) VALUES ('" + req.body.datetime + "','" + req.body.env_id + "','" + req.body.numofleaves + "','" + req.body.height + "')";
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        res.end();
+    });
+    res.send('<h3>Session Created!</h3><br> <button type="button"><a href="/admin">Back</a></button>');
+});
+
 //display html
 let server = app.listen(8080, function () {
 });
