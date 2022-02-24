@@ -51,7 +51,7 @@ app.post('/create_session', function (req, res) {
     var numofleaves = req.body.numofleaves;
     var height = req.body.height;
 
-    var sql = "INSERT INTO Organizer (datetime, env_id, numofleaves, height) VALUES ('" + req.body.datetime + "','" + req.body.env_id + "','" + req.body.numofleaves + "','" + req.body.height + "')";
+    var sql = "INSERT INTO Organizer (datetime, env_id, num_of_leaves, height) VALUES ('" + req.body.datetime + "','" + req.body.env_id + "','" + req.body.numofleaves + "','" + req.body.height + "')";
     con.query(sql, function (err, result) {
         if (err) throw err;
         res.end();
