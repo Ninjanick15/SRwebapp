@@ -1,3 +1,0 @@
-C:\Users\Sojir\Documents\GitHub\SRwebapp\root-access\root-access\obj\Debug\root-access.njsproj.AssemblyReference.cache
-C:\Users\Sojir\Documents\GitHub\SRwebapp\root-access\root-access\obj\Debug\root-access.njsproj.CoreCompileInputs.cache
-C:\Users\Sojir\Documents\GitHub\SRwebapp\root-access\root-access\bin\Microsoft.NodejsTools.WebRole.dll

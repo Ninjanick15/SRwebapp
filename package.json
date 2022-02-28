@@ -1,9 +1,0 @@
-{
-  "name": "root-access",
-  "version": "0.0.0",
-  "description": "root-access",
-  "main": "server.js",
-  "author": {
-    "name": ""
-  }
-}
