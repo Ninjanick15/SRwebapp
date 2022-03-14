@@ -1,4 +1,4 @@
 ---
 deployment:
       tasks:
-        - export DEPLOYPATH=/home/gljo4uxrniy6/public_html  
+        - export DEPLOYPATH=/home/gljo4uxrniy6/public_html/
