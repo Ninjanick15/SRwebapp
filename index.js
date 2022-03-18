@@ -22,51 +22,10 @@ router.get('/', function (req, res) {
 app.use('/', router);
 
 //we need one of these for each html page we have. 
-router.get('/reg', function (req, res) { // set this to be the same as your href <a> tag in the nav menu 
-    res.sendFile(path.join(__dirname, '/reg.html')); // the registration page
+router.get('/dash', function (req, res) { // set this to be the same as your href <a> tag in the nav menu 
+    res.sendFile(path.join(__dirname, '/dashboard.html')); // the registration page
 });
-app.use('/reg', router); //same as top
-
-router.get('/geninfo', function (req, res) {
-    res.sendFile(path.join(__dirname, '/geninfo.html')); // the general information page
-});
-app.use('/geninfo', router);
-
-router.get('/speakers', function (req, res) {
-    res.sendFile(path.join(__dirname, '/speakers.html')); // the speakers page
-});
-app.use('/speakers', router);
-
-router.get('/account', function (req, res) {
-    res.sendFile(path.join(__dirname, '/account.html')); // the account page
-});
-app.use('/account', router);
-
-router.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname, '/login.html')); // the admin page
-});
-app.use('/login', router);
-
-router.get('/admin', function (req, res) {
-    res.sendFile(path.join(__dirname, '/admin.html')); // the admin page
-});
-app.use('/admin', router);
-
-router.get('/search', function (req, res) {
-    res.sendFile(path.join(__dirname, '/search.html')); // the admin page
-});
-app.use('/search', router);
-
-router.get('/delete', function (req, res) {
-    res.sendFile(path.join(__dirname, '/delete.html')); // the admin page
-});
-app.use('/delete', router);
-
-router.get('/update', function (req, res) {
-    res.sendFile(path.join(__dirname, '/update.html')); // the admin page
-});
-app.use('/update', router);
-
+app.use('/dash', router); //same as top
 
 app.get('/style.css', function (req, res) {
     res.sendFile(path.join(__dirname, '/style.css')); //link the css
