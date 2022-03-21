@@ -25,13 +25,6 @@ con.getConnection(function (err) { // .getConnection for pool connection, .conne
     }
     console.log("Connected to database!");
 });
-con.getConnection(function (err) { // .getConnection for pool connection, .connect for normal connection.
-    if (err) {
-        console.log(err)
-        return
-    }
-    console.log("Connected to database!");
-});
 
 app.post('/update', function (req, res) {
 
@@ -48,7 +41,7 @@ app.post('/update', function (req, res) {
     res.send('<h3>Session Updated!</h3><br> <button type="button"><a href="/update">Back</a></button>');
 });
 
-//app.post('/register', function (req, res) {
+//app.post('/update', function (req, res) {
 
 //    var fname = req.body.fname;
 //    var address = req.body.address;
