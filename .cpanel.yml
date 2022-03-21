@@ -4,3 +4,4 @@ deployment:
         - export DEPLOYPATH=/home/gljo4uxrniy6/public_html/
         - /bin/cp index.html $DEPLOYPATH 
         - /bin/cp dashboard.html $DEPLOYPATH 
+        - /bin/cp index.js $DEPLOYPATH 
