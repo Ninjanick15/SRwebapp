@@ -12,7 +12,7 @@ var fs = require("fs");
 var mysql = require('mysql');
 
 var con = mysql.createPool({ // .createPool if we want the connection to stay open(pool), .createConnection closes after a amount of time (normal)
-    host: "remotemysql.com", //do not change these four lines. login details for our DB
+    host: "50.62.144.120 ", //do not change these four lines. login details for our DB
     user: "gljo4uxrniy6",
     password: "Wildcats1863",
     database: "gljo4uxrniy6"
