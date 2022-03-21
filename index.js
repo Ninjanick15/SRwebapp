@@ -47,3 +47,22 @@ app.post('/update', function (req, res) {
     });
     res.send('<h3>Session Updated!</h3><br> <button type="button"><a href="/update">Back</a></button>');
 });
+
+//app.post('/register', function (req, res) {
+
+//    var fname = req.body.fname;
+//    var address = req.body.address;
+//    var email = req.body.email;
+//    var school = req.body.school;
+//    var role = req.body.role;
+//    var topics = req.body.topics;
+
+//    var sql = "INSERT INTO Registrant (name, address, email, school, role, topics) VALUES ('" + req.body.fname + "','" + req.body.address + "','" + req.body.email + "','" + req.body.school + "','" + req.body.role + "','" + req.body.topics + "')";
+//    con.query(sql, function (err, results) {
+//        if (err) throw err;
+//        console.log(results);
+//    });
+
+//    res.send('<h3>Registration Submitted!</h3><br> <button type="button"><a href="/">Home</a></button>');
+
+//});
