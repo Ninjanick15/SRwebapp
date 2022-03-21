@@ -25,3 +25,25 @@ con.getConnection(function (err) { // .getConnection for pool connection, .conne
     }
     console.log("Connected to database!");
 });
+con.getConnection(function (err) { // .getConnection for pool connection, .connect for normal connection.
+    if (err) {
+        console.log(err)
+        return
+    }
+    console.log("Connected to database!");
+});
+
+app.post('/update', function (req, res) {
+
+    var date = req.body.date;
+    var env = req.body.env;
+    var leaves = req.body.leaves;
+    var height = req.body.height;
+
+    var sql = "UPDATE Growth SET datetime = ? num_of_leaves = ? height = ? WHERE env_id = ? ";
+    con.query(sql, [req.body.date, req.body.env, req.body.leaves, req.body.height], function (err, result, fields) {
+        if (err) throw err;
+        console.log(result.affectedRows + " record(s) updated");
+    });
+    res.send('<h3>Session Updated!</h3><br> <button type="button"><a href="/update">Back</a></button>');
+});
