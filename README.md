@@ -1,2 +1,2 @@
 # SRwebapp
-Web app for SR. web project
+Web app for Root Access web project
