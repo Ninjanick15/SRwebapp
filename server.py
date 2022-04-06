@@ -2,9 +2,12 @@ from __future__ import print_function
 from datetime import date, datetime, timedelta
 import mysql.connector
 
-cnx = mysql.connector.connect(user='gljo4uxrniy6', password='Wildcats1863',
-                              host='50.62.144.120',
-                              database='root-access')
+cnx = mysql.connector.connect(
+    host='50.62.144.120',
+    user='gljo4uxrniy6', 
+    password='Wildcats1863',                        
+    database='root-access'
+    )
 
 cursor = cnx.cursor()
 
