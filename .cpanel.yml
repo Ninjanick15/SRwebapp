@@ -2,5 +2,5 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home/gljo4uxrniy6/public_html/rootacces.ksusalinawebdev.net
-        - /bin/cp/ * $DEPLOYPATH 
-        - /bin/cp/ style.css $DEPLOYPATH 
+        - /bin/cp/templates * $DEPLOYPATH 
+        - /bin/cp/templates style.css $DEPLOYPATH 
