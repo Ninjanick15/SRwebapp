@@ -1,5 +1,5 @@
 from __future__ import print_function
-from flask import Flask
+from flask import Flask, render_template, request
 from datetime import date, datetime, timedelta
 import mysql.connector
 
