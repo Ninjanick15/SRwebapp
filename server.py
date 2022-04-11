@@ -12,19 +12,30 @@ rootdb = mysql.connector.connect(
     database='mpelXDDRJY'
     )
 
-cursor = rootdb.cursor()
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-add_growth = ("INSERT INTO Growth (datetime, env_id, num_of_leaves, height) VALUES (%s, %s, %s, %s)")
+@app.route('/get-text', methods=['GET', 'POST'])
+def foo():
+    bar = request.form['test']
 
-growth_data = (date(1977, 6, 14), '4', '3', '13')
+if __name__ == '__main__':
+    app.run()
 
-# Insert new growth
-cursor.execute(add_growth, growth_data)
+# cursor = rootdb.cursor()
+
+# add_growth = ("INSERT INTO Growth (datetime, env_id, num_of_leaves, height) VALUES (%s, %s, %s, %s)")
+
+# growth_data = (date(1977, 6, 14), '4', '3', '13')
+
+# # Insert new growth
+# cursor.execute(add_growth, growth_data)
 
 # Make sure data is committed to the database
 rootdb.commit()
 
-cursor.close()
+# cursor.close()
 
 rootdb.close()
 
