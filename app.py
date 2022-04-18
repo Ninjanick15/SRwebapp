@@ -17,10 +17,10 @@ def crud():
     return render_template('crud.html')
     
 
-app.config['MYSQL_HOST'] = ''
-app.config['MYSQL_USER'] = ''
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = ''
+app.config['MYSQL_HOST'] = 'remotemysql.com'
+app.config['MYSQL_USER'] = 'mpelXDDRJY'
+app.config['MYSQL_PASSWORD'] = 'r3KEzuSVtb'
+app.config['MYSQL_DB'] = 'mpelXDDRJY'
 
 mysql = MySQL(app)
 
