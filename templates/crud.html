@@ -16,11 +16,13 @@
         <a href='/dashboard'><button class="button">Dashboard</button></a>
     </center>
 
-    <form method="POST" action="">
+    <form method="POST" action="/form.py">
         <center>
         <H1>Enter your details </H1> <br>
-        First Name <input type = "text" name= "fname" /> <br>
-        Last Name <input type = "text" name = "lname" /> <br>
+        date and time <input type = "datetime-local" name= "datetime" /> <br>
+        Enviroment ID <input type = "int" name = "env_id" /> <br>
+        Number of Leaves <input type = "int" name= "num_of_leaves" /> <br>
+        Height <input type = "int" name = "height" /> <br>
         <input type = "submit">
         </center>
     </form>
