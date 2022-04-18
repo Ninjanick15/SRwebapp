@@ -1,5 +1,0 @@
----
-deployment:
-      tasks:
-        - export DEPLOYPATH=/home/gljo4uxrniy6/public_html/rootaccess.ksusalinawebdev.net
-        - /bin/cp * $DEPLOYPATH
