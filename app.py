@@ -17,16 +17,7 @@ def dashboard():
 
 @app.route('/crud')
 def crud():
-    return render_template('crud.html')
-
-# @app.route('/env')
-# def env():
-#     return render_template('env.html')
-
-# @app.route('/plant')
-# def plant():
-#     return render_template('plant.html')
-    
+    return render_template('crud.html')    
 
 app.config['MYSQL_HOST'] = 'remotemysql.com'
 app.config['MYSQL_USER'] = 'mpelXDDRJY'
@@ -34,7 +25,6 @@ app.config['MYSQL_PASSWORD'] = 'r3KEzuSVtb'
 app.config['MYSQL_DB'] = 'mpelXDDRJY'
 
 mysql = MySQL(app)
-
 
 @app.route('/crud', methods=['GET', 'POST'])
 def growth():
