@@ -1,6 +1,3 @@
-from os import name
-from random import choice
-from tkinter import HIDDEN
 from flask import Flask,  request, render_template
 import datetime
 from flask_mysqldb import MySQL
