@@ -1,32 +1,16 @@
-# from crypt import methods
-# from crypt import methods
 from flask import Flask,  request, render_template, redirect, url_for, session
 import datetime
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
-# import re
+import re
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
-    msg=''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
-        password = request.form['password']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM User WHERE UserName = %s AND Password = %s', (username, password,))
-        account = cursor.fetchone()
-        if account:
-            session['loggedin'] = True
-            session['id'] = account['id']
-            session['username'] = account['username']
-            return 'Logged in successfully!'
-        else:
-            msg = 'Incorrect username/password!'
-    return render_template('index.html', msg=msg)
+    return render_template('index.html')
 
-@app.route('/dashboard/',methods=['GET','POST'])
+@app.route('/dashboard/')
 def dashboard():
     return render_template('dashboard.html')
 
@@ -41,6 +25,23 @@ app.config['MYSQL_DB'] = 'mpelXDDRJY'
 
 mysql = MySQL(app)
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    msg='Username or Password incorrect!'
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT UserName FROM User WHERE UserName = %s AND PassWord = %s', (username, password,))
+        account = cursor.fetchone()
+        if account:
+            session['loggedin'] = True
+            session['id'] = account['id']
+            session['username'] = account['username']         
+        else:
+            return(msg)
+        return render_template('dashboard.html')  
+
 @app.route('/crud', methods=['GET', 'POST'])
 def growth():
     if request.method == "POST":
@@ -54,6 +55,7 @@ def growth():
         mysql.connection.commit()
         cur.close()
         return 'success'
+        # return redirect(url_for('crud'))        
     return render_template('crud.html')
 
 @app.route('/env', methods=['GET', 'POST'])
@@ -70,6 +72,7 @@ def enviroment():
         mysql.connection.commit()
         cur.close()
         return 'success'
+        # return redirect(url_for('crud'))
     return render_template('env.html')
 
 @app.route('/plant', methods=['GET', 'POST'])
@@ -85,6 +88,7 @@ def plant():
         mysql.connection.commit()
         cur.close()
         return 'success'
+        # return redirect(url_for('crud'))
     return render_template('plant.html')
 
 if __name__ == '__main__':
