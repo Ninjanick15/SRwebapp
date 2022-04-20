@@ -1,56 +1,69 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8" />
 
     <title>Root Access :: Crud</title>
 
     <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 
+    <img src="/static/media/Logo.png" alt="Logo" style="width:275px;height:325px;">
+
 </head>
+
 <body>
 
     <center>
         <a href='/'><button class="button">Home</button></a>
         <a href='/dashboard'><button class="button">Dashboard</button></a>
     </center>
-<h1>Input Growth</h1>
+
+    <h1>Input Growth</h1>
     <form method="POST" action="http://127.0.0.1:5000/crud">
+
         <center>
-        <H1>Enter your details.</H1> <br>
-        date and time <input type = "int" name= "datetime" /> <br>
-        Enviroment ID <input type = "int" name = "env_id1" /> <br>
-        Number of Leaves <input type = "int" name= "num_of_leaves" /> <br>
-        Height <input type = "int" name = "height" /> <br>
-        <input type = "submit" value="Enter Growth">
+            <H1>Enter your details.</H1> <br>          
+            <input type = "int" name= "datetime" value="Date and Time"/>  <br>
+            <input type = "int" name = "env_id1" value="Enviroment ID"/> <br>
+            <input type = "int" name= "num_of_leaves" value="Number of Leaves"/> <br>
+            <input type = "int" name = "height" value="Height"/> <br>
+            <input type = "submit" value="Enter Growth">
         </center>
+
     </form>
 
     <h1>Add an Enviroment.</h1>
     <form method="POST" action="http://127.0.0.1:5000/env">
+
         <center>
-        <H1>Enter your details </H1> <br>
-        Enviroment ID <input type = "int" name= "env_id2" /> <br>
-        Plant ID <input type = "int" name = "plant_id1" /> <br>
-        Is it Running <input type = "int" name = "is_running" /> <br>
-        Start Date <input type = "int" name= "startdate" /> <br>
-        Name <input type = "text" name = "name1" /> <br>
-        <input type = "submit" value="Add Enviroment">
+            <H1>Enter your details </H1> <br>
+            <input type = "int" name= "env_id2" value="Enviroment ID"/> <br>
+            <input type = "int" name = "plant_id1" value="Plant ID"/> <br>
+            <input type = "int" name = "is_running" value="On or Off"/> <br>
+            <input type = "int" name= "startdate" value="Start Date"/> <br>
+            <input type = "text" name = "name1" value="Name"/> <br>
+            <input type = "submit" value="Add Enviroment">
         </center>
+
     </form>
 
     <h1>Add a Plant.</h1>
     <form method="POST" action="http://127.0.0.1:5000/plant">
+
         <center>
-        <H1>Enter your details </H1> <br>
-        Plant ID <input type = "int" name= "plant_id2" /> <br>
-        Name <input type = "int" name = "name2" /> <br>
-        Required Moisture <input type = "int" name= "RequiredMoisture" /> <br>
-        Required Light <input type = "int" name = "RequiredLight" /> <br>
-        <input type = "submit" value="Add Plant">
+          <H1>Enter your details </H1> <br>
+          <input type = "int" name= "plant_id2" value="Plant ID"/> <br>
+          <input type = "int" name = "name2" value="Name"/> <br>
+          <input type = "int" name= "RequiredMoisture" value="Required Moisture"/> <br>
+          <input type = "int" name = "RequiredLight" value="Required Light"/> <br>
+          <input type = "submit" value="Add Plant">
         </center>
+
     </form>
 
 </body>
+
 </html>

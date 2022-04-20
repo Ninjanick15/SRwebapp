@@ -1,14 +1,32 @@
-from flask import Flask,  request, render_template
+# from crypt import methods
+# from crypt import methods
+from flask import Flask,  request, render_template, redirect, url_for, session
 import datetime
 from flask_mysqldb import MySQL
+import MySQLdb.cursors
+# import re
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    msg=''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM User WHERE UserName = %s AND Password = %s', (username, password,))
+        account = cursor.fetchone()
+        if account:
+            session['loggedin'] = True
+            session['id'] = account['id']
+            session['username'] = account['username']
+            return 'Logged in successfully!'
+        else:
+            msg = 'Incorrect username/password!'
+    return render_template('index.html', msg=msg)
 
-@app.route('/dashboard/')
+@app.route('/dashboard/',methods=['GET','POST'])
 def dashboard():
     return render_template('dashboard.html')
 

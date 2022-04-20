@@ -1,3 +1,18 @@
-h1 {
-    color: blueviolet;
+.wow {
+    width: 100px;
+  }
+html {
+  background-color:#080808;
+}
+button,h1 {
+  background-color: #080808; 
+  border: 3px solid #023502;
+  color: #403f3f;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 175px;
+  height: 75px;
 }
