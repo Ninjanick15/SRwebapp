@@ -1,18 +1,81 @@
-.wow {
-    width: 100px;
-  }
 html {
   background-color:#080808;
 }
-button,h1 {
+
+button, input {
   background-color: #080808; 
-  border: 3px solid #023502;
+  border: #023502;
   color: #403f3f;
-  padding: 15px 32px;
+}
+
+#nav {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  width: 175px;
-  height: 75px;
+  background-color: #080808; 
+  border: 3px groove #023502;
+  color: #403f3f;
+  margin: auto;
+  width: 30%;
+  padding: 3px;
+}
+
+.wrapper{
+  margin: auto;
+  width: 30%;
+  border: 3px groove #023502;
+  padding: 3px;
+}
+
+#text{
+  color: #403f3f;
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  border: 3px;
+  padding: 10px;
+}
+
+#form{
+  color: #403f3f;
+  margin: auto;
+  width: 30%;
+  border: 3px groove #023502;
+  padding: 10px;
+  padding-right: 75px;
+}
+
+#button{
+  color: #403f3f;
+  margin: auto;
+  width: 30%;
+  border: 3px groove #13e833;
+  padding: 10px;
+  margin-top: 5px;
+  padding-right: 75px;
+}
+
+/* Dashboard css*/
+.row.content {
+  height: 550px
+}
+
+.container-fluid {
+  background-color: #080808; 
+  border: 3px groove #023502;
+  color: #403f3f;
+}
+
+#box{
+  background-color: #080808; 
+  border: 3px groove #023502;
+  color: #403f3f;
+}
+
+.sidenav {
+  background-color: #080808;
+  height: 100%;
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;} 
 }

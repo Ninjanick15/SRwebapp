@@ -6,6 +6,8 @@ import re
 
 app = Flask(__name__)
 
+app.secret_key = 'jOE_dIRTAY'
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -32,12 +34,11 @@ def login():
         username = request.form['username']
         password = request.form['password']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT UserName FROM User WHERE UserName = %s AND PassWord = %s', (username, password,))
+        cursor.execute('SELECT * FROM User WHERE UserName = %s AND PassWord = %s', (username, password,))
         account = cursor.fetchone()
         if account:
             session['loggedin'] = True
-            session['id'] = account['id']
-            session['username'] = account['username']         
+            session['UserName'] = account['PassWord']         
         else:
             return(msg)
         return render_template('dashboard.html')  
