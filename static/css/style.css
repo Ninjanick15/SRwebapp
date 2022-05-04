@@ -1,81 +1,162 @@
 html {
-  background-color:#080808;
-}
-
-button, input {
-  background-color: #080808; 
-  border: #023502;
-  color: #403f3f;
-}
-
-#nav {
-  text-align: center;
-  background-color: #080808; 
-  border: 3px groove #023502;
-  color: #403f3f;
-  margin: auto;
-  width: 30%;
-  padding: 3px;
-}
-
-.wrapper{
-  margin: auto;
-  width: 30%;
-  border: 3px groove #023502;
-  padding: 3px;
-}
-
-#text{
-  color: #403f3f;
-  text-align: center;
-  margin: auto;
-  width: 30%;
-  border: 3px;
-  padding: 10px;
-}
-
-#form{
-  color: #403f3f;
-  margin: auto;
-  width: 30%;
-  border: 3px groove #023502;
-  padding: 10px;
-  padding-right: 75px;
-}
-
-#button{
-  color: #403f3f;
-  margin: auto;
-  width: 30%;
-  border: 3px groove #13e833;
-  padding: 10px;
-  margin-top: 5px;
-  padding-right: 75px;
-}
-
-/* Dashboard css*/
-.row.content {
-  height: 550px
-}
-
-.container-fluid {
-  background-color: #080808; 
-  border: 3px groove #023502;
-  color: #403f3f;
-}
-
-#box{
-  background-color: #080808; 
-  border: 3px groove #023502;
-  color: #403f3f;
-}
-
-.sidenav {
-  background-color: #080808;
-  height: 100%;
-}
-
-/* On small screens, set height to 'auto' for the grid */
-@media screen and (max-width: 767px) {
-  .row.content {height: auto;} 
-}
+  background-color: #101010;
+  opacity: 1;
+  background-image:  radial-gradient(#345400 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#345400 0.8500000000000001px, #101010 0.8500000000000001px);
+  background-size: 34px 34px;
+  background-position: 0 0,17px 17px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: 900px;
+  }
+  body {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: 900px;
+  font-size: 22px;
+  }
+  
+  button, input {
+    background-color: transparent; 
+    border: 4px #023502;
+    color: #787878;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: 900px;
+    font-size: 22px;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+  }
+  
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  
+  #nav {
+    background-color: transparent; 
+    color: #787878;
+  }
+  
+  .wrapper{
+    margin: auto;
+    width: 30%;
+    border: 4px groove #023502;
+    padding: 3px;
+  }
+  
+  #text{
+    color: #787878;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    border: 4px;
+    padding: 10px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: 900px;
+  }
+  
+  #form{
+    color: #787878;
+    margin: auto;
+    width: 30%;
+    border: 4px groove #023502;
+    padding: 10px;
+    padding-right:75px;
+  }
+  
+  #button{
+    color: #787878;
+    margin: auto;
+    width: 30%;
+    border: 4px groove  #023502;
+    padding: 10px;
+    margin-top: 5px;
+    padding-right: 75px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: 900px;
+  }
+  
+  #mode{
+    color: #787878;
+  }
+  
+  .logo {
+    float: left;
+    margin: 0px, 15px, 15px, 0px;
+    width: 35%;
+  }
+  
+  /* Dashboard css*/
+  .dashwrapper{
+    color: #787878;
+    border: 4px groove #023502;
+    padding: 3px;
+    width: 100%;
+    height: auto;
+  }
+  
+  #head{
+    margin: auto;
+    width: 75%;
+    border: 4px #023502;
+    padding: 10px;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+     #chart_div {
+              width: 1200px;
+          }
+          
+          body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+  body{
+  padding:10% 3% 10% 3%;
+  text-align:center;
+  color: #787878;
+    }
+  
+  .mode {
+   float:right;
+    }
+  
+  .change {
+    cursor: pointer;
+    border: 3px solid #555;
+    border-radius: 55%;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 8px;
+    color: #787878
+          }
+  .dark{             
+  background-color: #f6f6f6;
+  opacity: 1;
+  background-image:  radial-gradient(#7ac303 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#7ac303 0.8500000000000001px, #f6f6f6 0.8500000000000001px);
+  background-size: 34px 34px;
+  background-position: 0 0,17px 17px;
+  color: #787878;
+          }  

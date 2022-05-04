@@ -9,23 +9,28 @@
     <title>Root Access :: Crud</title>
 
     <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
-
-    <img src="/static/media/Logo.png" alt="Logo" style="width:275px;height:325px;">
-
+   <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
 </head>
 
 <body>
 
-
+<div class="mode">
+        Light mode:         
+        <span class="change">OFF</span>
+    </div>
+  <div class="navbar">
   <div id="nav">
     <a href='/'><button class="button">Log Out</button></a>
   </div>
   <div id="nav">
     <a href='/dashboard'><button class="button">Dashboard</button></a>
   </div>
+  </div>
 
 <div class="wrapper">
-  <form method="POST" action="http://127.0.0.1:5000/crud">
+  <form method="POST" action="/crud">
     <div id="text">       
       <h2>Input Growth</h2> 
     </div>
@@ -45,7 +50,7 @@
       <input type = "submit" value="Enter Growth">
     </div>
   </form>
-  <form method="POST" action="http://127.0.0.1:5000/env">
+  <form method="POST" action="/env">
     <div id="text">  
       <h2>Add an Enviroment.</h2>
     </div>
@@ -68,7 +73,7 @@
       <input type = "submit" value="Add Enviroment">
     </div>
   </form>
-  <form method="POST" action="http://127.0.0.1:5000/plant">
+  <form method="POST" action="/plant">
     <div id="text">
       <h2>Add a Plant.</h2>
     </div>
@@ -89,6 +94,18 @@
     </div>
   </form>
 </div> 
+<script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+
   
 </body>
 
