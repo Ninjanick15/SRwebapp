@@ -45,35 +45,35 @@ def login():
 
 @app.route('/crud', methods=['GET', 'POST'])
 def growth():
+    now = datetime.datetime.utcnow()
     if request.method == "POST":
         details = request.form
-        datetime = details['datetime']
+        date = now.strftime('%Y-%m-%d %H:%M:%S')
         env_id1 = details['env_id1']
         num_of_leaves = details['num_of_leaves']
         height = details['height']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO Growth(datetime, env_id, num_of_leaves, height) VALUES (%s, %s, %s, %s)", (datetime, env_id1, num_of_leaves, height))
+        cur.execute("INSERT INTO Growth(datetime, env_id, num_of_leaves, height) VALUES (%s, %s, %s, %s)", (date, env_id1, num_of_leaves, height))
         mysql.connection.commit()
         cur.close()
-        return 'success'
-        # return redirect(url_for('crud'))        
+        return 'success'  
     return render_template('crud.html')
 
 @app.route('/env', methods=['GET', 'POST'])
 def enviroment():
+    now = datetime.datetime.utcnow()
     if request.method == "POST":
         details = request.form
         env_id2 = details['env_id2']
         plant_id1 = details['plant_id1']
         is_running = details['is_running']
-        startdate = details['startdate']
+        startdate = now.strftime('%Y-%m-%d %H:%M:%S')
         name1 = details['name1']
         cur = mysql.connection.cursor()
         cur.execute("INSERT INTO Enviroment(env_id, plant_id, is_running, startdate, name) VALUES (%s, %s, %s, %s, %s)", (env_id2, plant_id1, is_running, startdate, name1))
         mysql.connection.commit()
         cur.close()
         return 'success'
-        # return redirect(url_for('crud'))
     return render_template('env.html')
 
 @app.route('/plant', methods=['GET', 'POST'])
@@ -89,7 +89,6 @@ def plant():
         mysql.connection.commit()
         cur.close()
         return 'success'
-        # return redirect(url_for('crud'))
     return render_template('plant.html')
 
 if __name__ == '__main__':
